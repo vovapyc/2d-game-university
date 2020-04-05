@@ -66,20 +66,7 @@ bool HelloWorld::init() {
 
 void HelloWorld::update(float dt) {
 
-    if (go_r) {
-        static int count = 0;
-        ++count;
-
-        char *buf[10];
-        // sprintf(buf, "%d", count);
-
-        EventCustom event("game_custom_event1");
-        event.setUserData(buf);
-
-        _eventDispatcher->dispatchEvent(&event);
-
-    }
-
+    if (go_r) fly->setPosition(Vec2(fly->getPosition().x + 5, fly->getPosition().y));
     if (go_l) fly->setPosition(Vec2(fly->getPosition().x - 5, fly->getPosition().y));
     if (go_d) fly->setPosition(Vec2(fly->getPosition().x, fly->getPosition().y - 5));
     if (go_u) fly->setPosition(Vec2(fly->getPosition().x, fly->getPosition().y + 5));
