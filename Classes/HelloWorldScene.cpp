@@ -35,6 +35,11 @@ bool HelloWorld::init() {
     animation->setDelayPerUnit(0.2f);
     animation->setLoops(-1);
 
+    // Dead sprite
+    auto deadHeart = Sprite::create("deadHeart.png");
+    deadHeart->setPosition(Vec2(400, 200));
+    this->addChild(deadHeart);
+
     animate = Animate::create(animation);
     /*fly->runAction(RepeatForever::create(animate));*/
 
