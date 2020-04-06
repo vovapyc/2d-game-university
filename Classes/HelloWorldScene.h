@@ -25,6 +25,8 @@ public:
     bool go_u = false;
     bool go_d = false;
 
+    short countOfLives = 3;
+
 
 };
 
